@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="./assets/logo.png" type="imahe/jp" />
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: lexend, sans-serif;
+  font: lexend;
+}
+
+.border-box {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.border-img {
+  height: 100%;
+  width: 100%;
+  background-image: url("./assets/top.jpg");
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  color: white;
+  padding-left: 5px;
+  padding: 0px 25px;
+}
+
+.border-box-right {
+  height: 100%;
+  padding: 0px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.border-box-right-text {
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+.WholeNavbar {
+  height: 75px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sections {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0px 25px;
+}
+
+.select {
+  border: none;
+  background-color: transparent;
+}
+
+.icons {
+  height: 100%;
+  width: 34%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  gap: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+.icontag {
+  height: 100%;
+  width: 100%;
+  color: red;
+}
+
+.herosec {
+  height: 600px;
+  width: 100%;
+  font-family: Merienda, sans-serif;
+  font: Merienda;
+  text-align: center;
+}
+
+.herosecimg {
+  height: 100%;
+  width: 100%;
+  background-image: url("./assets/pizza.jpg");
+  background-size: 100% 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.herosec span {
+  font-size: 18px;
+  color: white;
+  padding-top: 55px;
+}
+
+.herosec h2 {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 45px;
+}
+
+.herosec button {
+  height: 9%;
+  width: 14%;
+  color: white;
+  border-radius: 15px;
+  background-color: #bf1109;
+  border-color: transparent;
+  font-size: 15px;
+}
+
+.promo{
+    height: 88%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.promogrid{
+    height: 62%;
+    width: 86%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 30px;
+}
+
+.sec1{
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+    border-radius: 5px;
+    position: relative;
+}
+
+.sec1 img{
+    height: 100%;
+    width: 100%;
+}
+
+.sec1child{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    left: 300px;
+    color: white;
+}
+
+.sec1child button {
+  height: 16%;
+  width: 32%;
+  color: white;
+  border-radius: 15px;
+  background-color: #bf1109;
+  border-color: transparent;
+  font-size: 15px;
+}
+
+.sec2{
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+    border-radius: 5px;
+    position: relative;
+}
+
+.sec2 img{
+    height: 100%;
+    width: 100%;
+}
+
+.sec2child{
+    position: absolute;
+    top: 40px;
+    left: 150px;
+}
+
+.sec2child button {
+  height: 10%;
+  width: 70%;
+  color: white;
+  border-radius: 15px;
+  background-color: #bf1109;
+  border-color: transparent;
+  font-size: 15px;
+}
+
+.service {
+  height: 20%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.servicehighlights {
+  height: 100%;
+  width: 88%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service1 {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.service1 i {
+  height: 75%;
+  width: 25%;
+  background-color: #bf1109;
+  color: white;
+  border-radius: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.service1 i:hover {
+  transform-style: preserve-3d;
+  /* transform: rotateY(180deg); */
+  /* transform: rotateX(180deg); */
+}
+
+.service2 {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.service2 i {
+  height: 75%;
+  width: 25%;
+  background-color: #bf1109;
+  color: white;
+  border-radius: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.service3 {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.service3 i {
+  height: 75%;
+  width: 25%;
+  background-color: #bf1109;
+  color: white;
+  border-radius: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.populas {
+  height: 30%;
+  width: 100%;
+  background-color: rgb(227, 18, 18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.populas-top {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.populas-bottom{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.populasgrid {
+  height: 80%;
+  width: 100%;
+  background-color: green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.populasgridsec {
+  height: 95%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0px 15px;
+  padding: 0px 15px;
+}
+
+.section1 {
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.section2 {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(29, 214, 247);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.section3 {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(243, 18, 186);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.section4 {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(249, 23, 53);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.section5 {
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.section6 {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(29, 214, 247);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.section7 {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(243, 18, 186);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.section8 {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(249, 23, 53);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- border-box -->
+    <div class="border-box">
+      <div class="border-img">
+        <h4 class="text">Free Delivery For All Orders Over $99</h4>
+        <section class="border-box-right">
+          <select class="border-box-right-text">
+            <option>INR ₹</option>
+          </select>
+          <select class="border-box-right-text">
+            <option>English</option>
+          </select>
+        </section>
+      </div>
+    </div>
+    <!-- Nav bar Left menu -->
+    <nav class="WholeNavbar">
+      <div class="sections">
+        <h4>HOME</h4>
+        <h4>SHOP</h4>
+        <h4>COLLECTIONS</h4>
+        <h4>BLOGS</h4>
+        <h4>PAGES</h4>
+      </div>
+      <!-- Middle Logo-->
+      <section class="logo">
+        <img src="./assets/logo.png" alt="logo" />
+      </section>
+      <!-- Right Menu -->
+      <div class="icons">
+        <section class="icon">
+          <i class="fa-regular fa-user"></i><br />
+          <section class="iconstag">
+            <p>Register</p>
+            <a href="#">Login</a>
+          </section>
+        </section>
+        <section class="icon">
+          <i class="fa-regular fa-heart"></i><br />
+          <section class="iconstag">
+            <p>Your</p>
+            <a href="#">wishlist</a>
+          </section>
+        </section>
+        <section class="icon">
+          <i class="fa-solid fa-cart-shopping"></i><br />
+          <section class="iconstag">
+            <p>Mycart</p>
+            <a href="#">RS. 0.00</a>
+          </section>
+        </section>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="herosec">
+      <div class="herosecimg">
+        <span>Let's get cheesy!</span>
+        <h2>Enjoy our<br />delicious food</h2>
+        <!-- <a href="#" class="order-btn">ORDER NOW</a> -->
+        <button>ORDER NOW</button>
+      </div>
+    </div>
+
+    <!-- Promo Banners -->
+    <div class="promo">
+      <div class="promogrid">
+        <section class="sec1">
+          <img src="./assets/pizza1.jpg" />
+          <section class="sec1child">
+            <p>on this week</p>
+            <h1>Cheese<br>delight pizza</h1>
+            <button>ORDER NOW</button>
+          </section>
+        </section>
+        <section class="sec2">
+          <img src="./assets/burger.jpg" />
+          <section class="sec1child">
+            <p>on this week</p>
+            <h1>Cheese<br>italian burger</h1>
+            <button>ORDER NOW</button>
+          </section>
+        </section>
+      </div>
+    </div>
+    <!-- Service Highlights Section -->
+    <div class="service">
+      <div class="servicehighlights">
+        <section class="service1">
+          <i class="fa-regular fa-truck"></i>
+          <section class="servicetext">
+            <h4>Shipping Delivery</h4>
+            <p>within 30 minities</p>
+          </section>
+        </section>
+        <section class="service2">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <section class="servicetext">
+            <h4>Fast Delivery</h4>
+            <p>within 30 minities</p>
+          </section>
+        </section>
+        <section class="service3">
+          <i class="fa-solid fa-bowl-food"></i>
+          <section class="servicetext">
+            <h4>Absolute dining</h4>
+            <p>Best buffet restaurent</p>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <!-- populas dishes -->
+    <div class="populas">
+      <section class="populas-top">
+        <i class="fa-solid fa-cookie-bite"></i>
+        <h3>populas dishes</h3>
+        <i class="fa-solid fa-cookie-bite"></i>
+      </section>
+      <br><section class="populas-bottom">
+      <p>More Delicious Food</p>
+      </section>
+    </div>
+    <div class="populasgrid">
+      <section class="populasgridsec">
+        <section class="section1"></section>
+        <section class="section2"></section>
+        <section class="section3"></section>
+        <section class="section4"></section>
+        <section class="section5"></section>
+        <section class="section6"></section>
+        <section class="section7"></section>
+        <section class="section8"></section>
+      </section>
+    </div>
+  </body>
+</html>
+
+|`
