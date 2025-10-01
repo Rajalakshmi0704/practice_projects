@@ -1,3 +1,3 @@
-# 100Day
+learnings
 
 https://rajalakshmi0704.github.io/100Days/Day1.html
