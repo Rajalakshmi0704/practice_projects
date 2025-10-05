@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pizza</title>
+    <link rel="stylesheet" href="./styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Merienda:wght@600&display=swap"
       rel="stylesheet"
@@ -15,424 +16,983 @@
     <link rel="shortcut icon" href="./assets/logo.png" type="imahe/jp" />
     <style>
       * {
-  margin: 0;
-  padding: 0;
-}
+        margin: 0;
+        padding: 0;
+      }
 
-body {
-  height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
-  font-family: lexend, sans-serif;
-  font: lexend;
-}
+      body {
+        height: 100vh;
+        width: 100%;
+        overflow-x: hidden;
+      }
 
-.border-box {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+      .border-box {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
 
-.border-img {
-  height: 100%;
-  width: 100%;
-  background-image: url("./assets/top.jpg");
-  background-size: 100% 100%;
-  display: flex;
+      .border-img {
+        height: 100%;
+        width: 100%;
+        background-image: url("./assets/top.jpg");
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .text {
+        color: white;
+        padding-left: 5px;
+        padding: 0px 25px;
+      }
+
+      .border-box-right {
+        height: 100%;
+        padding: 0px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .border-box-right-text {
+        font-size: 16px;
+        border: none;
+        background-color: transparent;
+        color: white;
+      }
+
+      .WholeNavbar {
+        height: 75px;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .sections {
+        height: 100%;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 0px 25px;
+      }
+
+      .select {
+        border: none;
+        background-color: transparent;
+      }
+
+      .icons {
+        height: 100%;
+        width: 34%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .icon {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0px 10px;
+        gap: 8px;
+      }
+
+      a {
+        text-decoration: none;
+        color: red;
+      }
+      .icontag {
+        height: 100%;
+        width: 100%;
+        color: red;
+      }
+
+      .herosec {
+        height: 600px;
+        width: 100%;
+        font-family: Merienda, sans-serif;
+        font: Merienda;
+        text-align: center;
+      }
+
+      .herosecimg {
+        height: 100%;
+        width: 100%;
+        background-image: url("./assets/pizza.jpg");
+        background-size: 100% 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+      }
+
+      .herosec span {
+        font-size: 18px;
+        color: white;
+        padding-top: 55px;
+      }
+
+      .herosec h2 {
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 1.2;
+        text-align: center;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 45px;
+      }
+
+      .herosec button {
+        height: 9%;
+        width: 14%;
+        color: white;
+        border-radius: 15px;
+        background-color: #bf1109;
+        border-color: transparent;
+        font-size: 15px;
+      }
+
+      .promo {
+        height: 88%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .promogrid {
+        height: 62%;
+        width: 86%;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 30px;
+      }
+
+      .sec1 {
+        height: 100%;
+        width: 100%;
+        background-color: aqua;
+        border-radius: 5px;
+        position: relative;
+      }
+
+      .sec1 img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .sec1child {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 40px;
+        left: 300px;
+        color: white;
+      }
+
+      .sec1child button {
+        height: 16%;
+        width: 32%;
+        color: white;
+        border-radius: 15px;
+        background-color: #bf1109;
+        border-color: transparent;
+        font-size: 15px;
+      }
+
+      .sec2 {
+        height: 100%;
+        width: 100%;
+        background-color: aqua;
+        border-radius: 5px;
+        position: relative;
+      }
+
+      .sec2 img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .sec2child {
+        position: absolute;
+        top: 40px;
+        left: 150px;
+      }
+
+      .sec2child button {
+        height: 10%;
+        width: 70%;
+        color: white;
+        border-radius: 15px;
+        background-color: #bf1109;
+        border-color: transparent;
+        font-size: 15px;
+      }
+
+      .service {
+        height: 20%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+      }
+
+      .servicehighlights {
+        height: 100%;
+        width: 88%;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .service1 {
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .service1 i {
+        height: 75%;
+        width: 25%;
+        background-color: #bf1109;
+        color: white;
+        border-radius: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+      }
+
+      .service1 i:hover {
+        transform-style: preserve-3d;
+        /* transform: rotateY(180deg); */
+        /* transform: rotateX(180deg); */
+      }
+
+      .service2 {
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .service2 i {
+        height: 75%;
+        width: 25%;
+        background-color: #bf1109;
+        color: white;
+        border-radius: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+      }
+
+      .service3 {
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .service3 i {
+        height: 75%;
+        width: 25%;
+        background-color: #bf1109;
+        color: white;
+        border-radius: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+      }
+
+      .populas-top-space {
+        height: 8%;
+        width: 100%;
+      }
+
+      .whole-populas {
+        height: 8%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .sub-populas {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        font-family: Merienda, sans-serif;
+        font: Merienda;
+        font-size: 20px;
+        color: #c32119;
+        gap: 10px;
+      }
+
+      .whole-populas-text {
+        height: 14%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sub-populas-text {
+        height: 100%;
+        width: 90%;
+        background-color: white;
+        font-family: Merienda, sans-serif;
+        font: Merienda;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
+
+      .wholecontainer {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .subcontainer {
+        height: 84%;
+        width: 96%;
+        background-color: rgb(43, 255, 43);
+      }
+
+      .sub-container {
+        height: 100%;
+        width: 100%;
+        background-color: rgb(117, 171, 117);
+        /* display: flex;
   align-items: center;
-  justify-content: space-between;
-}
+  justify-content: center; */
+      }
 
-.text {
-  color: white;
-  padding-left: 5px;
-  padding: 0px 25px;
-}
+      .subcontainer1 {
+        height: 60%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 25px 25px;
+      }
 
-.border-box-right {
-  height: 100%;
-  padding: 0px 25px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
+      .section1 {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
 
-.border-box-right-text {
-  font-size: 16px;
-  border: none;
-  background-color: transparent;
-  color: white;
-}
+      .section1 img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+      }
 
-.WholeNavbar {
-  height: 75px;
-  width: 100%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+      .section2 {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
 
-.sections {
-  height: 100%;
-  width: 30%;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 0px 25px;
-}
+      .section2 img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+      }
 
-.select {
-  border: none;
-  background-color: transparent;
-}
+      .section3 {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
 
-.icons {
-  height: 100%;
-  width: 34%;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+      .section3 img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+      }
 
-.icon {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0px 10px;
-  gap: 8px;
-}
+      .section4 {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
 
-a {
-  text-decoration: none;
-  color: red;
-}
-.icontag {
-  height: 100%;
-  width: 100%;
-  color: red;
-}
+      .section4 img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+      }
 
-.herosec {
-  height: 600px;
-  width: 100%;
-  font-family: Merienda, sans-serif;
-  font: Merienda;
-  text-align: center;
-}
+      .subcontainer2 {
+        height: 40%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 25px 25px;
+      }
 
-.herosecimg {
-  height: 100%;
-  width: 100%;
-  background-image: url("./assets/pizza.jpg");
-  background-size: 100% 100%;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-}
+      .section5 {
+        height: 100%;
+        width: 100%;
+        background-color: #f9e7e7;
+      }
 
-.herosec span {
-  font-size: 18px;
-  color: white;
-  padding-top: 55px;
-}
+      .section5-text {
+        height: 100%;
+        width: 100%;
+        background-color: #ac4545;
+        display: flex;
+        justify-content: space-between;
+      }
 
-.herosec h2 {
-  font-size: 64px;
-  font-weight: 600;
-  line-height: 1.2;
-  text-align: center;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 45px;
-}
+      .section5-text h3 {
+        height: 30px;
+        width: 100%;
+        background-color: orange;
+      }
 
-.herosec button {
-  height: 9%;
-  width: 14%;
-  color: white;
-  border-radius: 15px;
-  background-color: #bf1109;
-  border-color: transparent;
-  font-size: 15px;
-}
+      .section5-text h4 {
+        height: 40px;
+        width: 100%;
+        background-color: aquamarine;
+      }
 
-.promo{
-    height: 88%;
-    width: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+      .section6 {
+        height: 100%;
+        width: 100%;
+        background-color: #f9e7e7;
+      }
 
-.promogrid{
-    height: 62%;
-    width: 86%;
-    background-color: white;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 30px;
-}
+      .section7 {
+        height: 100%;
+        width: 100%;
+        background-color: #f9e7e7;
+      }
 
-.sec1{
-    height: 100%;
-    width: 100%;
-    background-color: aqua;
-    border-radius: 5px;
-    position: relative;
-}
+      .section8 {
+        height: 100%;
+        width: 100%;
+        background-color: #f9e7e7;
+      }
 
-.sec1 img{
-    height: 100%;
-    width: 100%;
-}
+      .whole-specialoffer {
+        height: 90%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-.sec1child{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 40px;
-    left: 300px;
-    color: white;
-}
+      .sub-specialoffer {
+        height: 80%;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+      }
 
-.sec1child button {
-  height: 16%;
-  width: 32%;
-  color: white;
-  border-radius: 15px;
-  background-color: #bf1109;
-  border-color: transparent;
-  font-size: 15px;
-}
+      .special1 {
+        height: 100%;
+        width: 100%;
+      }
 
-.sec2{
-    height: 100%;
-    width: 100%;
-    background-color: aqua;
-    border-radius: 5px;
-    position: relative;
-}
+      .special1 img {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+      }
 
-.sec2 img{
-    height: 100%;
-    width: 100%;
-}
+      .specialoffer-text-container {
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        gap: 10px 10px;
+      }
 
-.sec2child{
-    position: absolute;
-    top: 40px;
-    left: 150px;
-}
+      .special2 {
+        height: 40px;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        font-family: Lexend, sans-serif;
+        font: Lexend;
+        font-size: 20px;
+      }
 
-.sec2child button {
-  height: 10%;
-  width: 70%;
-  color: white;
-  border-radius: 15px;
-  background-color: #bf1109;
-  border-color: transparent;
-  font-size: 15px;
-}
+      .special2 img {
+        height: 26px;
+      }
 
-.service {
-  height: 20%;
-  width: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-}
+      .special2 h5 {
+        color: #c1170f;
+      }
 
-.servicehighlights {
-  height: 100%;
-  width: 88%;
-  background-color: white;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
+      .specialtext1 {
+        height: 60px;
+        width: 100%;
+        background-color: white;
+        font-family: Merienda, sans-serif;
+        font: Merienda;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+      }
 
-.service1 {
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
+      .specialtext2 {
+        height: 50px;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        font-family: Merienda, sans-serif;
+        font: Merienda;
+        font-size: 40px;
+      }
 
-.service1 i {
-  height: 75%;
-  width: 25%;
-  background-color: #bf1109;
-  color: white;
-  border-radius: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 35px;
-}
+      .whole-specialtimer {
+        height: 180px;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        font-family: Merienda, sans-serif;
+        font: Merienda;
+        font-size: 20px;
+      }
 
-.service1 i:hover {
-  transform-style: preserve-3d;
-  /* transform: rotateY(180deg); */
-  /* transform: rotateX(180deg); */
-}
+      .sub-specialtimer {
+        height: 120px;
+        width: 100%;
+        padding: 10px;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 10px;
+      }
 
-.service2 {
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
+      .specialtime1 {
+        border: 1px solid rgb(211, 211, 211);
+        display: inline-block;
+        border-radius: 10px;
+        text-align: center;
+        overflow: hidden;
+      }
 
-.service2 i {
-  height: 75%;
-  width: 25%;
-  background-color: #bf1109;
-  color: white;
-  border-radius: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 35px;
-}
+      .specialtime1-text {
+        width: 60px;
+        padding: 10px;
+        padding-left: 35px;
+      }
 
-.service3 {
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
+      .specialtime2 {
+        border: 1px solid rgb(211, 211, 211);
+        display: inline-block;
+        border-radius: 10px;
+        text-align: center;
+        overflow: hidden;
+      }
 
-.service3 i {
-  height: 75%;
-  width: 25%;
-  background-color: #bf1109;
-  color: white;
-  border-radius: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 35px;
-}
+      .specialtime2-text {
+        width: 60px;
+        padding: 10px;
+        padding-left: 35px;
+      }
 
-.populas {
-  height: 30%;
-  width: 100%;
-  background-color: rgb(227, 18, 18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      .specialtime3 {
+        border: 1px solid rgb(211, 211, 211);
+        display: inline-block;
+        border-radius: 10px;
+        text-align: center;
+        overflow: hidden;
+      }
 
-.populas-top {
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
-}
+      .specialtime3-text {
+        width: 60px;
+        padding: 10px;
+        padding-left: 35px;
+      }
 
-.populas-bottom{
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
-}
+      .specialtime4 {
+        border: 1px solid rgb(211, 211, 211);
+        display: inline-block;
+        border-radius: 10px;
+        text-align: center;
+        overflow: hidden;
+      }
 
-.populasgrid {
-  height: 80%;
-  width: 100%;
-  background-color: green;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+      .specialtime4-text {
+        width: 60px;
+        padding: 10px;
+        padding-left: 35px;
+      }
 
-.populasgridsec {
-  height: 95%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 0px 15px;
-  padding: 0px 15px;
-}
+      .specialoffer-button {
+        height: 100px;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-.section1 {
-  height: 100%;
-  width: 100%;
-  background-color: yellow;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-}
+      .specialoffer-button button {
+        height: 48px;
+        width: 30%;
+        background-color: #bf1109;
+        border-radius: 15px;
+        border: none;
+        color: white;
+        border: tr;
+      }
 
-.section2 {
-  height: 100%;
-  width: 100%;
-  background-color: rgb(29, 214, 247);
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-}
+      .whole-trendingnow {
+        height: 6%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
 
-.section3 {
-  height: 100%;
-  width: 100%;
-  background-color: rgb(243, 18, 186);
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-}
+      .sub-trendingnow {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        font-family: Merienda, sans-serif;
+        font: Merienda;
+        font-size: 20px;
+        color: #c32119;
+        gap: 10px;
+      }
 
-.section4 {
-  height: 100%;
-  width: 100%;
-  background-color: rgb(249, 23, 53);
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-}
+      .whole-trendingnow-text {
+        height: 14%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-.section5 {
-  height: 100%;
-  width: 100%;
-  background-color: yellow;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
+      .sub-trendingnow-text {
+        height: 100%;
+        width: 90%;
+        background-color: white;
+        font-family: Merienda, sans-serif;
+        font: Merienda;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
 
-.section6 {
-  height: 100%;
-  width: 100%;
-  background-color: rgb(29, 214, 247);
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
+      .whole-getcheesy {
+        height: 90%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-.section7 {
-  height: 100%;
-  width: 100%;
-  background-color: rgb(243, 18, 186);
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
+      .sub-getcheesy {
+        overflow: hidden;
+        height: 90%;
+        width: 90%;
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+      }
 
-.section8 {
-  height: 100%;
-  width: 100%;
-  background-color: rgb(249, 23, 53);
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
+      .getcheesy-sec1 {
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
 
+      .getcheesy-sec1 video {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+
+      .getcheesy-sec2 {
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+
+      .getcheesy-sec2 video {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+
+      .getcheesy-sec3 {
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+
+      .getcheesy-sec3 video {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+
+      .getcheesy-sec4 {
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+
+      .getcheesy-sec4 video {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+
+      .whychooseus-top-space {
+        height: 8%;
+        width: 100%;
+      }
+
+      .whole-why-choose-us-text1 {
+        height: 6%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .sub-why-choose-us-text1 {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        font-family: Merienda, sans-serif;
+        font: Merienda;
+        font-size: 20px;
+        color: #c32119;
+        gap: 10px;
+      }
+
+      .whole-why-choose-us-text2 {
+        height: 14%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sub-why-choose-us-text2 {
+        height: 100%;
+        width: 90%;
+        background-color: white;
+        font-family: Merienda, sans-serif;
+        font: Merienda;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
+
+      .whole-whychooseus {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .sub-whychooseus1 {
+        overflow: hidden;
+        height: 60%;
+        width: 70%;
+        gap: 170px;
+        padding: 40px 0px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+      }
+
+      .whychooseus-sec1 {
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+
+      .whychooseus-sec1 img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+
+      .whychooseus-sec2 {
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+
+      .whychooseus-sec2 img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+
+      .whychooseus-sec3 {
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+
+      .whychooseus-sec3 img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+
+      .whychooseus-sec4 {
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+
+      .whychooseus-sec4 img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+
+      .whole-whychooseus2 {
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+      }
+
+      .sub-whychooseus2 {
+        overflow: hidden;
+        height: 80%;
+        width: 88%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+      }
+
+      .whychooseus-sec5 {
+        height: 100%;
+        width: 100%;
+      }
+
+      .whychooseus-sec5 h2 {
+        height: 50%;
+        width: 100%;
+        padding-left: 15px;
+      }
+
+      .whychooseus-sec5 h4 {
+        height: 50%;
+        width: 100%;
+      }
+
+      .whychooseus-sec6 {
+        height: 100%;
+        width: 100%;
+      }
+
+      .whychooseus-sec6 h2 {
+        height: 50%;
+        width: 100%;
+      }
+
+      .whychooseus-sec6 h4 {
+        height: 50%;
+        width: 100%;
+      }
+
+      .whychooseus-sec7 {
+        height: 100%;
+        width: 100%;
+        gap: 20px;
+      }
+
+      .whychooseus-sec7 h2 {
+        height: 50%;
+        width: 100%;
+      }
+
+      .whychooseus-sec7 h4 {
+        height: 50%;
+        width: 100%;
+      }
+
+      .whychooseus-sec8 {
+        height: 100%;
+        width: 100%;
+        gap: 20px;
+      }
+
+      .whychooseus-sec8 h2 {
+        height: 50%;
+        width: 100%;
+      }
+
+      .whychooseus-sec8 h4 {
+        height: 50%;
+        width: 100%;
+      }
+
+      /* food menu */
+
+      .whole-foodmenu {
+        height: 150%;
+        width: 100%;
+        background-color: pink;
+      }
+
+      .sub-foodmenu {
+        height: 90px;
+      }
     </style>
   </head>
   <body>
@@ -506,7 +1066,7 @@ a {
           <img src="./assets/pizza1.jpg" />
           <section class="sec1child">
             <p>on this week</p>
-            <h1>Cheese<br>delight pizza</h1>
+            <h1>Cheese<br />delight pizza</h1>
             <button>ORDER NOW</button>
           </section>
         </section>
@@ -514,7 +1074,7 @@ a {
           <img src="./assets/burger.jpg" />
           <section class="sec1child">
             <p>on this week</p>
-            <h1>Cheese<br>italian burger</h1>
+            <h1>Cheese<br />italian burger</h1>
             <button>ORDER NOW</button>
           </section>
         </section>
@@ -548,29 +1108,200 @@ a {
     </div>
 
     <!-- populas dishes -->
-    <div class="populas">
-      <section class="populas-top">
-        <i class="fa-solid fa-cookie-bite"></i>
-        <h3>populas dishes</h3>
-        <i class="fa-solid fa-cookie-bite"></i>
-      </section>
-      <br><section class="populas-bottom">
-      <p>More Delicious Food</p>
+    <div class="populas-top-space"></div>
+    <div class="whole-populas">
+      <section class="sub-populas">
+        <img src="./assets/cook.png" />
+        <h5>Popular dishes</h5>
+        <img src="./assets/cook.png" />
       </section>
     </div>
-    <div class="populasgrid">
-      <section class="populasgridsec">
-        <section class="section1"></section>
-        <section class="section2"></section>
-        <section class="section3"></section>
-        <section class="section4"></section>
-        <section class="section5"></section>
-        <section class="section6"></section>
-        <section class="section7"></section>
-        <section class="section8"></section>
+    <div class="whole-populas-text">
+      <section class="sub-populas-text">
+        <h1>More delicious food</h1>
       </section>
+    </div>
+    <div class="wholecontainer">
+      <div class="subcontainer">
+        <div class="sub-container">
+          <div class="subcontainer1">
+            <section class="section1">
+              <img src="./assets/populas4.jpg" />
+            </section>
+            <section class="section2">
+              <img src="./assets/populas3.jpg" />
+            </section>
+            <section class="section3">
+              <img src="./assets/populas2.jpg" />
+            </section>
+            <section class="section4">
+              <img src="./assets/populas1.jpg" />
+            </section>
+          </div>
+          <div class="subcontainer2">
+            <section class="section5">
+              <section class="section5-text">
+                <h3>Bacon cheeseburger</h3>
+                <h4>Double quarter cheese</h4>
+                <!-- <h2>Rs. 1500.00</h2> -->
+              </section>
+            </section>
+            <section class="section6"></section>
+            <section class="section7"></section>
+            <section class="section8"></section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- special offer -->
+    <div class="whole-specialoffer">
+      <div class="sub-specialoffer">
+        <section class="special1">
+          <img src="./assets/specialoffer.jpg" />
+        </section>
+        <div class="specialoffer-text-container">
+          <section class="special2">
+            <img src="./assets/cook.png" />
+            <h5>Special offer</h5>
+            <img src="./assets/cook.png" />
+          </section>
+          <h1 class="specialtext1">Get 30% discount every</h1>
+          <h1 class="specialtext2">item</h1>
+          <section class="whole-specialtimer">
+            <section class="sub-specialtimer">
+              <section class="specialtime1">
+                <section class="specialtime1-text">
+                  <h1>691</h1>
+                  <hr />
+                  <h3>Dys</h3>
+                </section>
+              </section>
+              <section class="specialtime2">
+                <section class="specialtime2-text">
+                  <h1>13</h1>
+                  <hr />
+                  <h3>Hrs</h3>
+                </section>
+              </section>
+              <section class="specialtime3">
+                <section class="specialtime3-text">
+                  <h1>13</h1>
+                  <hr />
+                  <h3>Min</h3>
+                </section>
+              </section>
+              <section class="specialtime4">
+                <section class="specialtime4-text">
+                  <h1>07</h1>
+                  <hr />
+                  <h3>Sec</h3>
+                </section>
+              </section>
+            </section>
+          </section>
+          <section class="specialoffer-button">
+            <button>ORDER NOW</button>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- Trending Now -->
+    <div class="whole-trendingnow">
+      <section class="sub-trendingnow">
+        <img src="./assets/cook.png" />
+        <h5>Get Cheesy</h5>
+        <img src="./assets/cook.png" />
+      </section>
+    </div>
+    <div class="whole-trendingnow-text">
+      <section class="sub-trendingnow-text">
+        <h1>Trending now</h1>
+      </section>
+    </div>
+
+    <!-- Get Cheesy Video Section-->
+    <div class="whole-getcheesy">
+      <div class="sub-getcheesy">
+        <section class="getcheesy-sec1">
+          <video autoplay muted loop playsinline>
+            <source src="./assets/videos/videosec1.mp4" type="video/mp4" />
+          </video>
+        </section>
+        <section class="getcheesy-sec2">
+          <video autoplay muted loop playsinline>
+            <source src="./assets/videos/videosec5.mp4" type="video/mp4" />
+          </video>
+        </section>
+        <section class="getcheesy-sec3">
+          <video autoplay muted loop playsinline>
+            <source src="./assets/videos/videosec3.mp4" type="video/mp4" />
+          </video>
+        </section>
+        <section class="getcheesy-sec4">
+          <video autoplay muted loop playsinline>
+            <source src="./assets/videos/videosec4.mp4" type="video/mp4" />
+          </video>
+        </section>
+      </div>
+    </div>
+
+    <!-- video section below why choose us -->
+    <div class="whychooseus-top-space"></div>
+    <div class="whole-why-choose-us-text1">
+      <div class="sub-why-choose-us-text1">
+        <img src="./assets/cook.png" />
+        <h5>Why choose us</h5>
+        <img src="./assets/cook.png" />
+      </div>
+    </div>
+
+    <div class="whole-why-choose-us-text2">
+      <div class="sub-why-choose-us-text2">
+        <h1>Why we're your best choice</h1>
+      </div>
+    </div>
+
+    <div class="whole-whychooseus">
+      <div class="sub-whychooseus1">
+        <section class="whychooseus-sec1">
+          <img src="./assets/img1.png" />
+        </section>
+        <section class="whychooseus-sec2">
+          <img src="./assets/img2.png" />
+        </section>
+        <section class="whychooseus-sec3">
+          <img src="./assets/img3.png" />
+        </section>
+        <section class="whychooseus-sec4">
+          <img src="./assets/img4.png" />
+        </section>
+      </div>
+    </div>
+    <div class="whole-whychooseus2">
+      <div class="sub-whychooseus2">
+        <section class="whychooseus-sec5">
+          <h2>Hygienic food</h2>
+          <h4>We are passionate about<br />serving fresh, flavorful</h4>
+        </section>
+        <section class="whychooseus-sec6">
+          <h2>Fresh environment</h2>
+          <h4>We are passionate about<br />serving fresh, flavorful</h4>
+        </section>
+        <section class="whychooseus-sec7">
+          <h2>Skilled chefs</h2>
+          <h4>We are passionate about<br />serving fresh, flavorful</h4>
+        </section>
+        <section class="whychooseus-sec8">
+          <h2>Event & party</h2>
+          <h4>We are passionate about<br />serving fresh, flavorful</h4>
+        </section>
+      </div>
+    </div>
+
+    <!-- Food menu -->
+    <div class="whole-foodmenu">
+      <div class="sub-foodmenu"></div>
     </div>
   </body>
 </html>
-
-|`
